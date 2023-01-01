@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark-mode">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inheritance plan configurator</title>
+    <link rel="stylesheet" href="/static/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css">
+  </head>
+  <body>
+    <div class="container" id="panels">
+      <div class="mb-4" id="header">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <h1 class="text-center" data-i18n-key="main_title">Inheritance plan configurator</h1>
+            <div id="toast-warning" hidden>
+              <div class="alert alert-warning" role="alert">
+                <p id="toast-warning-text"></p>
+              </div>
+            </div>
+            <div id="toast-error" hidden>
+              <div class="alert alert-danger" role="alert">
+                <p id="toast-error-text" data-i18n-key="incorrect_decryption_password">Incorrect access password. Please try again!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_create_or_import">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="card" style="min-height: 17rem">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="create_plan_title">Create new inheritance plan</h5>
+                    <p class="cart-text" data-i18n-key="create_plan_text">Welcome! If this is the first time you're creating a Bitcoin inheritance plan then click "Create plan" below. We will then guide you through the configurator to ensure that you create an inheritance plan that your heirs can rely on.</p>
+                    <button class="btn btn-primary btn-block mt-auto" data-offline-required="true" data-this-step="step_create_or_import" data-next-step="step_does_donts" data-i18n-key="create_plan_button" disabled>Create plan</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card" style="min-height: 17rem">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="import_plan_title">Import existing inheritance plan</h5>
+                    <p class="cart-text" data-i18n-key="import_plan_text">Have you previously created a Bitcoin inheritance plan with this configurator? Great! If you have a Satskeeper account your inheritance plan can be imported automatically, if not you can upload the encrypted file.</p>
+                    <button class="btn btn-secondary btn-block mt-auto" data-offline-required="true" data-this-step="step_create_or_import" data-next-step="step_import" data-i18n-key="import_plan_button" disabled>Import plan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 d-flex justify-content-center">
+            <i class="fs-5 ai-github me-2"></i><p class="fs-6 mt-1" data-i18n-key="open_source_text">This inheritance plan configurator is <a target="_blank" href="https://github.com/satskeeper/configurator">open-source</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_does_donts" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row content mt-4">
+          <div class="col-10 mx-auto">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="does_page_title1">Do's</h5>
+                    <ul style="line-height: 3; list-style-type:none; margin-left: 10%">
+                      <li><i class="ai-circle-check me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_do1">Document how to access each wallet.</span></li>
+                      <li><i class="ai-circle-check me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_do2">Document how to access each account.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="does_page_title2">Dont's</h5>
+                    <ul style="line-height: 3; list-style-type:none; margin-left: 10%">
+                      <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont1">Do NOT include any private keys.</span></li>
+                      <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont2">Do NOT include any seed words.</span></li>
+                      <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont3">Do NOT include any passwords.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-1">
+                  <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_does_donts" data-previous-step="step_create_or_import"><<</button>
+                </div>
+                <div class="col col-11">
+                  <button class="btn btn-primary btn-block mt-auto w-100" data-this-step="step_does_donts" data-next-step="step_create_password" data-i18n-key="continue_button">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_create_password" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row content mt-4">
+          <div class="col col-10 mx-auto">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="password_page_title">Choose access password</h5>
+                    <p class="cart-text" data-i18n-key="password_page_text1">Please store your access password securely. It is required in order to edit & access your inheritance plan in the future.</p>
+                    <p><span class="cart-text" data-i18n-key="password_page_text2">Locally generated inheritance plan access password:</span><span><kbd><span id="accessPassword"></span></kbd><a href="javascript:void(0)" id="copyPW"><i class="ai-copy ms-2"></i></a></span></p>
+                    <p>
+                      <span class="cart-text" data-i18n-key="password_page_text3">Alternatively you can also choose your own access password.</span>
+                      <span><button class="btn btn-secondary ms-2" id="ownPasswordButton" data-function="ownPassword" data-i18n-key="password_page_choose_button">Choose own</button></span>
+                    </p>
+                    <div id="password_form" hidden></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-1">
+                  <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_create_password" data-previous-step="step_does_donts"><<</button>
+                </div>
+                <div class="col col-11">
+                  <button class="btn btn-primary btn-block mt-auto w-100" data-function="setPasswordButton" data-i18n-key="password_page_continue_button">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_import" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row">
+              <div class="col" id="sessionPlan" hidden style="min-width: 25rem">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="import_account_title">Import from my account</h5>
+                    <p class="cart-text" data-i18n-key="import_account_text">We found an encrypted inheritance plan in your account.<br>To import that inheritance plan, enter your access password below and click 'Import plan'.</p>
+                    <div id="session_form"></div>
+                    <button class="btn btn-primary btn-block mt-auto" data-offline-required="true" data-this-step="step_import" data-next-step="step_configure" data-function="importFromSession" data-i18n-key="import_account_button">Import plan</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col" style="min-width: 25rem">
+                <div class="card" id="filePlan" >
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="import_file_title">Import from file</h5>
+                    <p class="cart-text" data-i18n-key="import_file_text">To import an encrypted inheritance plan, enter your access password and then select the file.</p>
+                    <div id="upload_form"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_configure" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row content mt-4">
+          <div class="col-12 col-md-10 mx-auto px-0">
+            <div class="card w-100" style="min-height: 28rem">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center" data-i18n-key="configure_title">Configure inheritance plan</h5>
+                <div id="main_form"></div>
+                <div class="mt-auto">
+                  <div class="row">
+                    <div class="col col-1">
+                      <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_configure" data-previous-step="step_create_password"><<</button>
+                    </div>
+                    <div class="col col-11">
+                      <button id="subStepButton" class="btn btn-primary w-100 btn-block" data-offline-required="true" data-function="proceedSubStep" data-i18n-key="configure_continue_button">Continue</button>
+                      <button id="validationButton" class="btn btn-primary w-100 btn-block d-none" data-offline-required="true" data-this-step="step_configure" data-next-step="step_save" data-function="finalisePlan" data-i18n-key="configure_encrypt_button">Encrypt plan and continue</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_save" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row">
+              <div class="col" style="min-width: 25rem">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="download_title">Download files</h5>
+                    <p class="cart-text mt-3" data-i18n-key="download_text">Done! Your inheritance plan has been encrypted. It's now time to download your inheritance access file and optionally the inheritance plan.</p>
+                    <h6 class="mt-4" data-i18n-key="download_access_file_title">Download access file</h6>
+                    <p class="cart-text" data-i18n-key="download_access_file_text">Please download your inheritance plan access file. It is required in order to access your inheritance plan in the future. It must be shared with all your heirs.</p>
+                    <button class="btn btn-primary btn-block mb-4" id="download" data-function="downloadAccessFile" data-i18n-key="download_access_file_button">Download access file</button>
+                    <h6 class="mt-5" data-i18n-key="download_plan_title">Download inheritance plan (optional)</h6>
+                    <p class="cart-text" data-i18n-key="download_plan_text">Optionally you can download the encrypted inheritance plan.</p>
+                    <button class="btn btn-secondary btn-block mb-4" id="download" data-function="downloadPlan" data-i18n-key="download_plan_button">Download inheritance plan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col col-1">
+                <button class="btn btn-secondary btn-block" data-this-step="step_save" data-previous-step="step_configure"><<</button>
+              </div>
+              <div class="col col-11">
+                <button id="continue-to-redirect" class="btn btn-primary btn-block w-100"  data-function="prepareForUpload" data-i18n-key="download_continue_button" disabled>Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_redirect" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row">
+              <div class="col" style="min-width: 25rem">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="save_plan_title">Save to Satskeeper</h5>
+                    <p class="cart-text" data-i18n-key="save_plan_text">All done! Now just click the button below to save your encrypted inheritance plan to your Satskeeper account.</p>
+                    <button class="btn btn-primary btn-block mt-auto" id="redirect-to-satskeeper" data-offline-required="false" data-function="redirectToSatskeeper" data-i18n-key="save_plan_button">Save to account</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/static/js/jspdf.js" defer></script>
+  <script type="text/javascript" src="/static/js/jsonEditor.js" defer></script>
+  <script type="text/javascript" src="/static/js/FileSaver.js" defer></script>
+  <script type="text/javascript" src="/static/js/cryptojs.js" defer></script>
+  <script src="/static/js/custom.js" type="module" defer></script>
+</html>

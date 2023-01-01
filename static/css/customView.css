@@ -1,0 +1,14 @@
+
+.btn-group {
+  display: none !important;
+}
+
+.row {
+  margin-top: 1rem;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+h3 {
+  margin-bottom: 0 !important;
+}

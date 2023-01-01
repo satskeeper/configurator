@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark-mode">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inheritance plan viewer</title>
+    <link rel="stylesheet" href="/static/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/customView.css" type="text/css">
+  </head>
+  <body>
+    <div class="container" id="panels">
+      <div class="mb-4" id="header">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <h1 class="text-center" data-i18n-key="main_title_viewer">Inheritance plan configurator</h1>
+            <div id="toast-warning" hidden>
+              <div class="alert alert-warning" role="alert">
+                <p id="toast-warning-text"></p>
+              </div>
+            </div>
+            <div id="toast-error" hidden>
+              <div class="alert alert-danger" role="alert">
+                <p id="toast-error-text" data-i18n-key="incorrect_decryption_password">Incorrect access password. Please try again!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="step_import">
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="row">
+              <div class="col" id="sessionPlan" hidden style="min-width: 25rem">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="import_account_title">Import from my account</h5>
+                    <p class="cart-text" data-i18n-key="import_account_text">We found an encrypted inheritance plan in your account.<br>To import that inheritance plan, enter your access password below and click 'Import plan'.</p>
+                    <div id="session_form"></div>
+                    <button class="btn btn-primary btn-block mt-auto" data-offline-required="true" data-this-step="step_import" data-next-step="step_configure" data-function="importFromSession" data-i18n-key="import_account_button">Import plan</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col" style="min-width: 25rem">
+                <div class="card" id="filePlan" >
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center" data-i18n-key="import_file_title">Import from file</h5>
+                    <p class="cart-text" data-i18n-key="import_file_text">To import an encrypted inheritance plan, enter your access password and then select the file.</p>
+                    <div id="upload_form"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="step_configure" hidden>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row content mt-4">
+          <div class="col-12 col-md-10 mx-auto px-0">
+            <div class="card w-100" style="min-height: 28rem">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center" data-i18n-key="viewer_title">View inheritance plan</h5>
+                <div id="main_form"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/static/js/jspdf.js" defer></script>
+  <script type="text/javascript" src="/static/js/jsonEditor.js" defer></script>
+  <script type="text/javascript" src="/static/js/FileSaver.js" defer></script>
+  <script type="text/javascript" src="/static/js/cryptojs.js" defer></script>
+  <script type="module" src="/static/js/custom.js" defer></script>
+</html>

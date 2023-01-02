@@ -171,10 +171,12 @@ export const lang = {
   access_file: {
     file_name: 'satskeeper-zugangsdatei.pdf',
     title: 'Nachlassplan-Zugangsdatei',
+    note: `Wichtig: Dieses Dokument enthält eine Seite pro Erbe.
+Bitte drucke dieses Dokument aus und gib jedem Erben die Seite mit dessen Namen.`,
     name_of_heir: 'Name des Erben:',
     main_body: `Lieber Erbe,\n
-Dein Verwandter hat einen Nachlassplan bei uns (Satskeeper) erstellt.
-Wir unterstützen deinen Verwandten dabei, einen reibungslosen Übergang des
+Dein Verwandter hat einen Nachlassplan mit Satskeeper erstellt.
+Wir unterstützen deinen Verwandten dabei, einen reibungslosen Übergang seines
 Vermögens auf die rechtmäßigen Erben zu gewährleisten.\n
 Dein Verwandter hat dich als einen der rechtmäßigen Erben angegeben.\n
 Dieses Dokument enthält wichtige Informationen, die du benötigst, um nach dem
@@ -183,7 +185,7 @@ Bitte bewahre dieses Dokument an einem sicheren Ort auf. Du wirst es
 nach dem Tod deines Verwandten benötigen.`,
     pwd_line: 'Zugangspasswort:',
     plan_id_line: 'Nachlassplan ID:',
-    support_line: 'Bei Fragen wende dich: support@satskeeper.com'
+    support_line: 'Bei Fragen wende dich an: support@satskeeper.com'
   },
   editor_controls: {
     "error_notset": "Property must be set",

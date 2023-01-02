@@ -134,9 +134,11 @@ export const lang = {
   access_file: {
     file_name: 'satskeeper-access-file.pdf',
     title: 'Inheritance plan access file',
+    note: `Important: This document contains one page for each heir.
+Please print this document and provide each heir with his/her corresponding page.`,
     name_of_heir: 'Name of heir:',
     main_body: `Dear heir,\n
-Your relative has set up his/heir inheritance plan with us (Satskeeper).
+Your relative has set up an inheritance plan with Satskeeper.
 We are assisting your relative to ensure that their is a smooth transition of\
 his/her assets to the legitimate heirs.\n
 Your relative listed you as one of the legitimate heirs.\n

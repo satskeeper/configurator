@@ -545,15 +545,17 @@ function downloadAccessFile(heirs) {
     }
     doc.setFontSize(20);
     doc.text(20, 20, lang.access_file.title);
-    doc.setFontSize(12);
-    doc.text(20, 35, `${lang.access_file.name_of_heir} ${heir.first} ${heir.last}`); // eslint-disable-line
     doc.setFontSize(10);
-    doc.text(20, 45, lang.access_file.main_body, {maxWidth: 170});
-    doc.setFontSize(14);
-    doc.text(20, 120, `${lang.access_file.pwd_line} ${pwd}`);
+    doc.text(20, 30, lang.access_file.note);
     doc.setFontSize(12);
-    doc.text(20, 130, `${lang.access_file.plan_id_line} ${planID}`);
-    doc.text(20, 140, lang.access_file.support_line);
+    doc.text(20, 55, `${lang.access_file.name_of_heir} ${heir.first} ${heir.last}`); // eslint-disable-line
+    doc.setFontSize(10);
+    doc.text(20, 65, lang.access_file.main_body, {maxWidth: 170});
+    doc.setFontSize(14);
+    doc.text(20, 135, `${lang.access_file.pwd_line} ${pwd}`);
+    doc.setFontSize(12);
+    doc.text(20, 145, `${lang.access_file.plan_id_line} ${planID}`);
+    doc.text(20, 155, lang.access_file.support_line);
   });
   doc.save(lang.access_file.file_name);
   doc.output('dataurlnewwindow');

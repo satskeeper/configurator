@@ -320,6 +320,18 @@ function checkDevMode() {
   }
 }
 
+async function checkSampleMode() {
+  const paramsString = window.location.search;
+  const searchParams = new URLSearchParams(paramsString);
+  if (searchParams.get('sample') === 'true') {
+    const {sampleData} = await import('./sample_data.js');
+    // Temporarily disabling certain validators
+    CONFIG.importing = true;
+    mainEditor.setValue(sampleData);
+    CONFIG.importing = false;
+  }
+}
+
 function checkSatskeeperMode() {
   const paramsString = window.location.search;
   const searchParams = new URLSearchParams(paramsString);
@@ -405,6 +417,7 @@ window.addEventListener('load', function() {
   setLanguage().then(() => {
     intializeEditors().then(() => {
       checkDevMode();
+      checkSampleMode();
       checkSatskeeperMode();
       initialSessionImport();
       attachNewHeirListener();

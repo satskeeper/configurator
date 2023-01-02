@@ -6,6 +6,8 @@ used and maintained by satskeeper.com
 The configurator can be used to generate, view & edit encrypted inheritance plans.
 
 ## Options:
+All these options can be combined by joining them into one querystring.
+Example: http://127.0.0.1:4000/configurator?lang=de&dev=true&sample=true
 ### Language
 - The configurator is currently available in English and German.
 - Query parameter: `lang`
@@ -19,6 +21,12 @@ you can stay connected.
 - Query parameter: `dev`
 - Default value: `false`
 - Changing to dev mode: http://127.0.0.1:4000/configurator?dev=true
+
+### Sample mode
+- If you want to auto-populate the configurator with some dummy sample data, then you should use the sample mode. The dummy data can be found in `static/js/sample_data.js`
+- Query parameter: `sample`
+- Default value: `false`
+- Changing to dev mode: http://127.0.0.1:4000/configurator?sample=true
 
 ## Running the configurator locally
 In order to run this configurator locally follow these steps:

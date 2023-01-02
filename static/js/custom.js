@@ -188,7 +188,7 @@ function setPasswordButton() {
     }
     else {
       if (userPW && userPW !== sessionPW) {
-        sessionStorage.setItem('pwd', userPw);
+        sessionStorage.setItem('pwd', userPW);
         nextSection('step_create_password', 'step_configure');
       }
     }

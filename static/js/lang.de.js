@@ -37,7 +37,7 @@ export const lang = {
   configure_continue_button: 'Weiter',
   configure_encrypt_button: 'Plan verschlüsseln und weiter',
   download_title: 'Dateien herunterladen',
-  download_text: 'Fertig! Dein Nachlassplan wurde verschlüsselt. Jetzt ist es Zeit, deine Zugangsdatei herunterzuladen. Optional kannst du auch den vershlüsselten Nachlassplan herunterladen.',
+  download_text: 'Fertig! Dein Nachlassplan wurde verschlüsselt. Jetzt ist es Zeit, deine Zugangsdatei herunterzuladen. Optional kannst du auch den verschlüsselten Nachlassplan herunterladen.',
   download_access_file_title: 'Zugangsdatei herunterladen',
   download_access_file_text: 'Bitte lade deine Zugangsdatei herunter. Diese wird benötigt, um deinen Nachlassplan zu bearbeiten und einzusehen. Alle Erben brauchen eine Kopie dieser Zugangsdatei.',
   download_access_file_button: 'Zugangsdatei herunterladen',
@@ -104,7 +104,7 @@ export const lang = {
         title_singlular: 'Wallet',
         descripton: `Gib alle Wallets an, auf die deine Erben nach deinem Tod zugreifen
           sollen. Stelle sicher, dass du keine geheimen Informationen, z.B. Wiederherstellungswörter
-          hier einträgst. Trage nur ein, wo sich diese Informationen finden lassn.`,
+          hier einträgst. Trage nur ein, wo sich diese Informationen finden lassen.`,
         wallet_alias_title: 'Wallet-Name',
         wallet_comment_title: 'Optionaler Kommentar',
         wallet_material_title: 'Backupmaterial',
@@ -174,12 +174,12 @@ export const lang = {
     name_of_heir: 'Name des Erben:',
     main_body: `Lieber Erbe,\n
 Dein Verwandter hat einen Nachlassplan bei uns (Satskeeper) erstellt.
-Wir unterstützen deinen Verwandten dabei, einen reibungslosen Übergang des\
+Wir unterstützen deinen Verwandten dabei, einen reibungslosen Übergang des
 Vermögens auf die rechtmäßigen Erben zu gewährleisten.\n
 Dein Verwandter hat dich als einen der rechtmäßigen Erben angegeben.\n
 Dieses Dokument enthält wichtige Informationen, die du benötigst, um nach dem
 Tod deines Verwandten Zugang auf dessen Nachlassplan zu erhalten.\n
-Bitte bewahre dieses Dokument an einem sicheren Ort auf. Du wirst es\
+Bitte bewahre dieses Dokument an einem sicheren Ort auf. Du wirst es
 nach dem Tod deines Verwandten benötigen.`,
     pwd_line: 'Zugangspasswort:',
     plan_id_line: 'Nachlassplan ID:',

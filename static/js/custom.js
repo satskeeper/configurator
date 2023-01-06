@@ -412,6 +412,15 @@ function displayNonEmptyCards() {
   });
 }
 
+function enableTooltips() {
+  const tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-toggle="tooltip"]')
+  );
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  })
+}
+
 // Once whole document has loaded
 window.addEventListener('load', function() {
   setLanguage().then(() => {
@@ -427,6 +436,7 @@ window.addEventListener('load', function() {
       attachChooseOwnPasswordHandler();
       attachDisplayCardListener();
       setTimeout(() => {
+        enableTooltips();
         proceedButtonContext();
       }, 1000);
       setInterval(() => {

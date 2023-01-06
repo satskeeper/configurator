@@ -2,6 +2,10 @@
   display: none;
 }
 
+[data-toggle="tooltip"] {
+  margin-left: 0.5rem;
+}
+
 body > .container:first-of-type {
   padding: 1.5rem;
 }

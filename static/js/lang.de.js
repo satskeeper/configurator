@@ -87,6 +87,7 @@ export const lang = {
           sollen. Ein Konto bei einem Custodian kann zum Beispiel ein Konto bei einer Börse, einer Crypto-Bank oder jeder anderen Institution, die Coins für dich verwahrt, sein.
           Falls du keine Coins auf Börsen hälst, überspringe diese Sektion.`,
         alias_title: 'Name',
+        alias_info: 'Name der Firma/Institution bei der du ein Konto hast.',
         comment_title: 'Optionaler Kommentar',
         access_material_title: 'Zugangsinformationen',
         access_material_description: `Bitte dokumentiere, welche Zungangsinformationen benötigt werden, um auf die ses Konto zuzugreifen. Erstelle einen Eintrag für jede
@@ -107,6 +108,7 @@ export const lang = {
           sollen. Stelle sicher, dass du keine geheimen Informationen, z.B. Wiederherstellungswörter
           hier einträgst. Trage nur ein, wo sich diese Informationen finden lassen.`,
         wallet_alias_title: 'Wallet-Name',
+        wallet_alias_info: 'Name des Wallets. Beispiel: "Sparbuch", "Gemixte Coins" etc.',
         wallet_comment_title: 'Optionaler Kommentar',
         wallet_material_title: 'Backupmaterial',
         wallet_material_title2: 'Material',
@@ -130,7 +132,9 @@ export const lang = {
         wiederherstellen. Wir führen ein umfangreiches Wiki mit Wiederherstellungs-Anleitungen
         für eine Vielzahl von Geräten & Wallets.`,
         device_alias_title: 'Gerätebezeichnung',
+        device_alias_info: 'Die offizielle Gerätebezeichnung dieses Geräts. Beispiel: "BitBox02 Hardware Wallet",  "Apple iPhone 12" etc.',
         device_location_title: 'Ort',
+        device_location_info: 'Dokumentiere, wo deine Erben dieses Gerät finden können.',
         device_comment_title: 'Optionaler Kommentar',
         device_selected_wallets_title: 'Auf das Gerät geladene Wallets:',
         device_selected_wallets_description: 'Bitte wähle aus, welche der auf der Seite "Wallets" dokumentierten Wallets auf diesem Gerät geladen sind. Wenn es sich bei dem Gerät beispielsweise um ein Hardware-Wallet handelt, könnten zum Beispiel zwei Wallets darauf geladen sein. Eine Wallet, die nur 24 Seed-Wörter benötigt und eine zweite Wallet, die 24 Seed-Wörter plus eine Passphrase benötigt. Um weitere Wallets zu dokumentieren, gehe zurück zur "Wallets" Seite.',
@@ -153,12 +157,18 @@ export const lang = {
         Coins jedem Erben zusteht. Die Summe aller Anteile muss 100% ergeben.
         Achtung: Die Namen der Erben werden nicht verschlüsselt.`,
         first_name_title: 'Vorname (nicht verschlüsselt)',
+        first_name_info: 'Der Name des Erben wird nicht verschlüsselt, da das Satskeeper Team diesen benötigt, um deinen Erben zu kontaktieren.',
         last_name_title: 'Nachname (nicht verschlüsselt)',
+        last_name_info: 'Der Name des Erben wird nicht verschlüsselt, da das Satskeeper Team diesen benötigt, um deinen Erben zu kontaktieren.',
         share_title:  'Anteil %',
+        share_info: 'Dokumentiere welcher Anteil der wiederhergestellten Coins diesem Erben zustehen.',
         location_title: 'Wohnort (Land & Stadt)',
+        location_info: 'Bitte gib an, in welcher Stadt & Land dieser Erbe lebt.',
         birthday_title: 'Geburtstag',
+        birthday_info: 'Bitte gib das Geburtsdatum dieses Erben an.',
         relationship_title: 'Verhältnis zum Erben',
         relationship_placeholder: 'Beispiel: Gatte, Kind, Enkel, Neffe etc.',
+        relationship_info: 'Was ist dein Verhältnis zu diesem Erben.',
         comment_title: 'Optionaler Kommentar'
       },
       finish: {

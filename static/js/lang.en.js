@@ -47,6 +47,7 @@ export const lang = {
           institution that is safekeeping coins on your behalf. If you are not
           storing coins on any custodial accounts, skip this section.`,
         alias_title: 'Name',
+        alias_info: 'The name of the company you have a custodial account with.',
         comment_title: 'Optional comment',
         access_material_title: 'Access material',
         access_material_description: `Please specify what access material is required in order to access this account. Create one entry for each piece of access material
@@ -70,6 +71,7 @@ export const lang = {
           Only the information on where this information can be found should
           be included.`,
         wallet_alias_title: 'Wallet name/alias',
+        wallet_alias_info: 'A user chosen name to identify this wallet. Example: "Main savings", "Mixed coins" etc.',
         wallet_comment_title: 'Optional comment',
         wallet_material_title: 'Backup material',
         wallet_material_title2: 'Material',
@@ -95,7 +97,9 @@ export const lang = {
           instructions for a wide range of devices which your heirs will have
           access to in order to help them restore.`,
         device_alias_title: 'Device name',
+        device_alias_info: 'The offical name of the device you are using. Example: "BitBox02 hardware wallet",  "Apple iPhone 12" etc.',
         device_location_title: 'Location',
+        device_location_info: 'Explain where your heirs can find this device.',
         device_comment_title: 'Optional comment',
         device_selected_wallets_title: 'Wallets loaded onto this device:',
         device_selected_wallets_title2: 'Wallets',
@@ -117,12 +121,18 @@ export const lang = {
           recovered funds they are entitled to. The total must sum to 100%.
           Attention: The name of your heir will not be encrypted.`,
         first_name_title: 'First name (not encrypted)',
+        first_name_info: 'The heir name will not be encrypted as the Satskeeper team needs it in order to be able to contact your heir.',
         last_name_title: 'Last name (not encrypted)',
+        last_name_info: 'The heir name will not be encrypted as the Satskeeper team needs it in order to be able to contact your heir.',
         share_title:  'Share %',
+        share_info: 'Specify what percentage of all recovered coins this heir is entitled to.',
         birthday_title: 'Birthday',
+        birthday_info: 'Please provide the birthday of this heir.',
         relationship_title: 'Relationship to heir',
         relationship_placeholder: 'Example: Spouse, Child, Grandchild, Nephew etc',
+        relationship_info: 'Please explain what your relationship to this heir is.',
         location_title: 'Country & city of residence',
+        location_info: 'Please speify the current city & country this heir is living in.',
         comment_title: 'Optional comment'
       },
       finish: {

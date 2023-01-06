@@ -145,6 +145,9 @@ export const mainFormSchema = {
               title: lang.editors.main.exchanges.alias_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.exchanges.alias_info,
+              },
             },
             comment: {
               title: lang.editors.main.exchanges.comment_title,
@@ -213,6 +216,9 @@ export const mainFormSchema = {
               title: lang.editors.main.wallets.wallet_alias_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.wallets.wallet_alias_info,
+              },
             },
             comment: {
               title: lang.editors.main.wallets.wallet_comment_title,
@@ -282,11 +288,17 @@ export const mainFormSchema = {
               title: lang.editors.main.devices.device_alias_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.devices.device_alias_info,
+              },
             },
             location: {
               title: lang.editors.main.devices.device_location_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.devices.device_location_info,
+              },
             },
             comment: {
               title: lang.editors.main.devices.device_comment_title,
@@ -371,11 +383,17 @@ export const mainFormSchema = {
               title: lang.editors.main.heirs.first_name_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.heirs.first_name_info,
+              },
             },
             last: {
               title: lang.editors.main.heirs.last_name_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.heirs.last_name_info,
+              },
             },
             share: {
               title: lang.editors.main.heirs.share_title,
@@ -383,11 +401,17 @@ export const mainFormSchema = {
               required: true,
               minimum: 0,
               maximum: 100,
+              options: {
+                infoText: lang.editors.main.heirs.share_info,
+              },
             },
             location: {
               title: lang.editors.main.heirs.location_title,
               type: 'string',
               required: true,
+              options: {
+                infoText: lang.editors.main.heirs.location_info,
+              },
             },
             birthday: {
               title: lang.editors.main.heirs.birthday_title,
@@ -397,6 +421,9 @@ export const mainFormSchema = {
               options: {
                 flatpickr: {},
               },
+              options: {
+                infoText: lang.editors.main.heirs.birthday_info,
+              },
             },
             relationship: {
               title: lang.editors.main.heirs.relationship_title,
@@ -405,6 +432,9 @@ export const mainFormSchema = {
                 inputAttributes: {
                   placeholder: lang.editors.main.heirs.relationship_placeholder,
                 },
+              },
+              options: {
+                infoText: lang.editors.main.heirs.relationship_info,
               },
             },
             comment: {

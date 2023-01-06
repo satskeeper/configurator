@@ -39,16 +39,18 @@ export const lang = {
           your Satskeeper account and/or download it.`
       },
       exchanges: {
-        title: 'Exchanges',
-        title_singlular: 'Exchange',
-        descripton: `Specify all exchange accounts that you are using which
-          your heirs should be able access after your death. If you are not
-          storing coins on any exchanges, skip this section.`,
+        title: 'Custodians',
+        title_singlular: 'Custodian',
+        descripton: `Specify all custodial accounts that you are using which
+          your heirs should be able access after your death. A custoidal account
+          could be an exchange account, an account at a digital asset bank or any similiar
+          institution that is safekeeping coins on your behalf. If you are not
+          storing coins on any custodial accounts, skip this section.`,
         alias_title: 'Name',
         comment_title: 'Optional comment',
         access_material_title: 'Access material',
-        access_material_description: `Create one entry for each piece of access material
-          that is required in order to access this exchange account.`,
+        access_material_description: `Please specify what access material is required in order to access this account. Create one entry for each piece of access material
+          that is required in order to access this account. Specify the type of the access material and where it can be found. Do not include secret information.`,
         access_material_title_2: 'Material',
         access_material_type_title: 'Type',
         access_material_type_option1: 'Email address',
@@ -72,7 +74,8 @@ export const lang = {
         wallet_material_title: 'Backup material',
         wallet_material_title2: 'Material',
         wallet_material_description: `Create one entry for each piece of backup material
-          that is required in order to access this wallet.`,
+          that is required in order to access this wallet. Specify the type of backup
+          material and where it can be found.`,
         wallet_material_type_title: 'Type',
         wallet_material_type_option1: 'Wallet seed words',
         wallet_material_type_option2: 'Wallet passphrase',
@@ -91,14 +94,15 @@ export const lang = {
           your wallet. We maintain an extensive wiki containing recovery
           instructions for a wide range of devices which your heirs will have
           access to in order to help them restore.`,
-        device_alias_title: 'Device name/alias',
+        device_alias_title: 'Device name',
         device_location_title: 'Location',
         device_comment_title: 'Optional comment',
         device_selected_wallets_title: 'Wallets loaded onto this device:',
         device_selected_wallets_title2: 'Wallets',
+        device_selected_wallets_description: `Please select which of the wallets you documented on the "Wallets" page are loaded on this specific device. For example if this device is a hardware wallet you might have two wallets loaded on it. One wallet that just requires 24 seed words and a second wallet that requires 24 seed words plus a passphrase. To document additional wallets, go back to the "Wallets" page`,
         access_material_title: 'Access material',
-        access_material_description: `Create one entry for each piece of access material
-          that is required in order to access this device.`,
+        access_material_description: `Please specify what access material is required in order to use this device. Create one entry for each piece of access material
+          that is required in order to access this specific device. Specify the type of the access material and where it can be found. Do not include secret information.`,
         access_material_title_2: 'Material',
         access_material_type_title: 'Type',
         access_material_type_option1: 'Device password',

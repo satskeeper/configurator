@@ -81,15 +81,16 @@ export const lang = {
         Satskeeper-Konto speichern und/oder herunterladen.`
       },
       exchanges: {
-        title: 'Börsen',
-        title_singlular: 'Börse',
-        descripton: `Gib alle Konten bei Börsen an, auf die deine Erben nach deinem Tod zugreifen
-          sollen. Falls du keine Coins auf Börsen hälst, überspringe diese Sektion.`,
+        title: 'Custodian',
+        title_singlular: 'Custodian',
+        descripton: `Gib alle Konten bei Custodians an, auf die deine Erben nach deinem Tod zugreifen
+          sollen. Ein Konto bei einem Custodian kann zum Beispiel ein Konto bei einer Börse, einer Crypto-Bank oder jeder anderen Institution, die Coins für dich verwahrt, sein.
+          Falls du keine Coins auf Börsen hälst, überspringe diese Sektion.`,
         alias_title: 'Name',
         comment_title: 'Optionaler Kommentar',
         access_material_title: 'Zugangsinformationen',
-        access_material_description: `Erstelle einen Eintrag für jede
-        Zugangsinformation, die benötigt wird, um auf dieses Konto zuzugreifen.`,
+        access_material_description: `Bitte dokumentiere, welche Zungangsinformationen benötigt werden, um auf die ses Konto zuzugreifen. Erstelle einen Eintrag für jede
+        Zugangsinformation, die benötigt wird, um auf dieses Konto zuzugreifen. Gib keine geheimen Informationen an.`,
         access_material_title_2: 'Material',
         access_material_type_title: 'Type',
         access_material_type_option1: 'Emailadresse',
@@ -110,7 +111,7 @@ export const lang = {
         wallet_material_title: 'Backupmaterial',
         wallet_material_title2: 'Material',
         wallet_material_description: `Erstelle einen Eintrag für jedes
-        Backupmaterial, das benötigt wird, um auf dieses Wallet zuzugreifen.`,
+        Backupmaterial, das benötigt wird, um auf dieses Wallet zuzugreifen. Dokumentiere den Typ des Backupmaterials und wo es gefunden werden kann.`,
         wallet_material_type_title: 'Typ',
         wallet_material_type_option1: 'Wallet-Wiederherstellungswörter',
         wallet_material_type_option2: 'Wallet-Passphrase',
@@ -132,11 +133,12 @@ export const lang = {
         device_location_title: 'Ort',
         device_comment_title: 'Optionaler Kommentar',
         device_selected_wallets_title: 'Auf das Gerät geladene Wallets:',
+        device_selected_wallets_description: 'Bitte wähle aus, welche der auf der Seite "Wallets" dokumentierten Wallets auf diesem Gerät geladen sind. Wenn es sich bei dem Gerät beispielsweise um ein Hardware-Wallet handelt, könnten zum Beispiel zwei Wallets darauf geladen sein. Eine Wallet, die nur 24 Seed-Wörter benötigt und eine zweite Wallet, die 24 Seed-Wörter plus eine Passphrase benötigt. Um weitere Wallets zu dokumentieren, gehe zurück zur "Wallets" Seite.',
         device_selected_wallets_title2: 'Wallets',
         device_selected_wallets_title2: 'Wallets',
         access_material_title: 'Zugangsinformationen',
-        access_material_description: `Erstelle einen Eintrag für jede
-        Zugangsinformation, die benötigt wird, um dieses Gerät zu verwenden.`,
+        access_material_description: `Dokumentiere welche Zugangsinformation benötigt werden, um dieses Gerät zu verwenden. Erstelle einen Eintrag für jede
+        Zugangsinformation, die benötigt wird, um dieses Gerät zu verwenden. Dokumentiere den Typ der Zugangsinformation und wo sie gefunden werden kann. Gib keine Geheimnisse an.`,
         access_material_title_2: 'Material',
         access_material_type_title: 'Typ',
         access_material_type_option1: 'Gerätepasswort',

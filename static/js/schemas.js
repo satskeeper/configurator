@@ -297,6 +297,7 @@ export const mainFormSchema = {
               type: 'array',
               format: 'table',
               title: lang.editors.main.devices.device_selected_wallets_title,
+              description: lang.editors.main.devices.device_selected_wallets_description,
               uniqueItems: true,
               items: {
                 type: 'string',

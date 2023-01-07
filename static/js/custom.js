@@ -265,10 +265,31 @@ function redirectToSatskeeper() {
   }
 }
 
+function serialize(object) {
+  if (Array.isArray(object)) {
+    return JSON.stringify(object.map((i) => serialize(i)));
+  }
+  else if (typeof object === 'object' && object !== null) {
+    return Object.keys(object)
+        .sort()
+        .map((key) => `${key}:${serialize(object[key])}`)
+        .join('|');
+  }
+  return object;
+}
+
+function calculatePlanHash(plan) {
+  const serialised = serialize(plan);
+  // eslint-disable-next-line new-cap
+  return CryptoJS.SHA256(serialised).toString();
+}
+
 function savePlanInSession() {
   const plan = mainEditor.getValue();
   const pwd = getPassword();
   const encryptedPlan = encryptInheritancePlan(plan, pwd);
+  const encryptedHash = calculatePlanHash(encryptedPlan);
+  encryptedPlan['encrypted_hash'] = encryptedHash;
   const jsonPlan = JSON.stringify(encryptedPlan);
   sessionStorage.setItem('encrypted_plan', jsonPlan);
 }

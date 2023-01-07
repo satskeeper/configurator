@@ -4,7 +4,7 @@ export const PLAINTEXTKEYS = [
   'date', 'version', 'first', 'last', 'planID', 'materialID', 'exchangeID',
   'walletID', 'deviceID', 'heirID',
 ];
-export const EXCLUDEKEYS = ['password', 'password_repeat'];
+export const EXCLUDEKEYS = ['password', 'password_repeat', 'encrypted_hash'];
 export const CONFIG = {
   devmode: false,
   require_offline: true,

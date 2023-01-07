@@ -71,6 +71,10 @@ export function removePlanID(plan) {
   delete plan['start']['planID'];
 }
 
+export function removeEncryptedHash(plan) {
+  delete plan['encrypted_hash'];
+}
+
 export function fakeOnChangeForInputs(form) {
   const ev = new Event('change');
   const inputs = form.querySelectorAll('input');
@@ -251,6 +255,8 @@ export function importFromSession(sessionEditor, mainEditor) {
   const decryptedPlan = decryptInheritancePlan(jsonPlan, pwd);
   // Remove plan ID so that new one is generated
   removePlanID(decryptedPlan);
+  // Remove encrypted hash so that new one is generated
+  removeEncryptedHash(decryptedPlan);
   // Store pw in session so that it can be used for encrypting the file later
   sessionStorage.setItem('pwd', pwd);
   // Temporarily disabling certain validators

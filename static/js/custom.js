@@ -2,7 +2,7 @@ import {
   encryptInheritancePlan, decryptInheritancePlan, checkNetwork,
   updateWarningToast, nextSection, resetTabsHighlight, previousSection,
   highlightTabsWithErrors, classAdded, fakeOnChangeForInputs,
-  removePlanID, importFromSession, ClassWatcher} from './utils.js';
+  removePlanID, removeEncryptedHash, importFromSession, ClassWatcher} from './utils.js';
 import {CONFIG} from './utils.js';
 
 export let lang = {};
@@ -25,6 +25,8 @@ JSONEditor.defaults.callbacks.upload = {
         const decryptedPlan = decryptInheritancePlan(result, pwd);
         // Reomve plan so that new one is auto-generated
         removePlanID(decryptedPlan);
+        // Remove encrypted hash so that new one is generated
+        removeEncryptedHash(decryptedPlan);
         // Temporarily disabling certain validators
         CONFIG.importing = true;
         mainEditor.setValue(decryptedPlan);

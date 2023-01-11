@@ -4,7 +4,7 @@ export const PLAINTEXTKEYS = [
   'date', 'version', 'first', 'last', 'planID', 'materialID', 'exchangeID',
   'walletID', 'deviceID', 'heirID',
 ];
-export const EXCLUDEKEYS = ['password', 'password_repeat', 'encrypted_hash'];
+export const EXCLUDEKEYS = ['password', 'password_repeat', 'checksums'];
 export const CONFIG = {
   devmode: false,
   require_offline: true,
@@ -71,8 +71,8 @@ export function removePlanID(plan) {
   delete plan['start']['planID'];
 }
 
-export function removeEncryptedHash(plan) {
-  delete plan['encrypted_hash'];
+export function removeChecksums(plan) {
+  delete plan['checksums'];
 }
 
 export function fakeOnChangeForInputs(form) {
@@ -255,8 +255,8 @@ export function importFromSession(sessionEditor, mainEditor) {
   const decryptedPlan = decryptInheritancePlan(jsonPlan, pwd);
   // Remove plan ID so that new one is generated
   removePlanID(decryptedPlan);
-  // Remove encrypted hash so that new one is generated
-  removeEncryptedHash(decryptedPlan);
+  // Remove checksums so that new one is generated
+  removeChecksums(decryptedPlan);
   // Store pw in session so that it can be used for encrypting the file later
   sessionStorage.setItem('pwd', pwd);
   // Temporarily disabling certain validators

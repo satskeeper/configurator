@@ -2,7 +2,7 @@ import {
   encryptInheritancePlan, decryptInheritancePlan, checkNetwork,
   updateWarningToast, nextSection, resetTabsHighlight, previousSection,
   highlightTabsWithErrors, classAdded, fakeOnChangeForInputs,
-  removePlanID, removeEncryptedHash, importFromSession, ClassWatcher} from './utils.js';
+  removePlanID, removeChecksums, importFromSession, ClassWatcher} from './utils.js';
 import {CONFIG} from './utils.js';
 
 export let lang = {};
@@ -25,8 +25,8 @@ JSONEditor.defaults.callbacks.upload = {
         const decryptedPlan = decryptInheritancePlan(result, pwd);
         // Reomve plan so that new one is auto-generated
         removePlanID(decryptedPlan);
-        // Remove encrypted hash so that new one is generated
-        removeEncryptedHash(decryptedPlan);
+        // Remove checksums so that new one is generated
+        removeChecksums(decryptedPlan);
         // Temporarily disabling certain validators
         CONFIG.importing = true;
         mainEditor.setValue(decryptedPlan);
@@ -280,7 +280,17 @@ function serialize(object) {
   return object;
 }
 
-function calculatePlanHash(plan) {
+function calculateChecksums(obj) {
+  const checksums = {
+    "total": calculateChecksum(obj)
+  }
+  Object.keys(obj).forEach((key, _) => {
+    checksums[key] = calculateChecksum(obj[key]);
+  });
+  return checksums;
+}
+
+function calculateChecksum(plan) {
   const serialised = serialize(plan);
   // eslint-disable-next-line new-cap
   return CryptoJS.SHA256(serialised).toString();
@@ -290,8 +300,7 @@ function savePlanInSession() {
   const plan = mainEditor.getValue();
   const pwd = getPassword();
   const encryptedPlan = encryptInheritancePlan(plan, pwd);
-  const encryptedHash = calculatePlanHash(encryptedPlan);
-  encryptedPlan['encrypted_hash'] = encryptedHash;
+  encryptedPlan['checksums'] = calculateChecksums(encryptedPlan);
   const jsonPlan = JSON.stringify(encryptedPlan);
   sessionStorage.setItem('encrypted_plan', jsonPlan);
 }

@@ -294,6 +294,13 @@ function decrypt(data, secret) {
     return bytes.toString(CryptoJS.enc.Utf8);
   }
   catch {
+    console.log("failed, retrying...")
+  }
+  try {
+    const bytes = CryptoJS.AES.decrypt(data, secret);
+    return bytes.toString(CryptoJS.enc.Utf8);
+  }
+  catch {
     throw new Error(lang.incorrect_decryption_password);
   }
 }

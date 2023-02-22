@@ -444,13 +444,15 @@ function displayNonEmptyCards() {
   });
 }
 
-function enableTooltips() {
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-toggle="tooltip"]')
-  );
-  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  })
+function attachTooltips() {
+  mainEditor.on('change',() => {
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-toggle="tooltip"]')
+    );
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl, {trigger : 'hover'})
+    })
+  });
 }
 
 // Once whole document has loaded
@@ -467,8 +469,8 @@ window.addEventListener('load', function() {
       showPassword();
       attachChooseOwnPasswordHandler();
       attachDisplayCardListener();
+      attachTooltips();
       setTimeout(() => {
-        enableTooltips();
         proceedButtonContext();
       }, 1000);
       setInterval(() => {

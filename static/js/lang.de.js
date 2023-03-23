@@ -193,8 +193,8 @@ Vermögens auf die rechtmäßigen Erben zu gewährleisten.\n
 Dein Verwandter hat dich als einen der rechtmäßigen Erben angegeben.\n
 Dieses Dokument enthält wichtige Informationen, die du benötigst, um nach dem
 Tod deines Verwandten Zugang auf dessen Nachlassplan zu erhalten.\n
-Bitte bewahre dieses Dokument an einem sicheren Ort auf. Du wirst es
-nach dem Tod deines Verwandten benötigen.`,
+Bitte bewahre dieses Dokument an einem sicheren Ort auf.
+Du wirst es nach dem Tod deines Verwandten benötigen.`,
     pwd_line: 'Zugangspasswort:',
     plan_id_line: 'Nachlassplan ID:',
     support_line: 'Bei Fragen wende dich an: support@satskeeper.com'

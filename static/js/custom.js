@@ -602,10 +602,10 @@ function downloadAccessFile(heirs) {
     doc.setFontSize(10);
     doc.text(20, 65, lang.access_file.main_body, {maxWidth: 170});
     doc.setFontSize(14);
-    doc.text(20, 135, `${lang.access_file.pwd_line} ${pwd}`);
+    doc.text(20, 140, `${lang.access_file.pwd_line} ${pwd}`);
     doc.setFontSize(12);
-    doc.text(20, 145, `${lang.access_file.plan_id_line} ${planID}`);
-    doc.text(20, 155, lang.access_file.support_line);
+    doc.text(20, 150, `${lang.access_file.plan_id_line} ${planID}`);
+    doc.text(20, 160, lang.access_file.support_line);
   });
   doc.save(lang.access_file.file_name);
   doc.output('dataurlnewwindow');

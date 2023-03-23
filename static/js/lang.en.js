@@ -153,12 +153,13 @@ Please print this document and provide each heir with his/her corresponding page
     name_of_heir: 'Name of heir:',
     main_body: `Dear heir,\n
 Your relative has set up an inheritance plan with Satskeeper.
-We are assisting your relative to ensure that their is a smooth transition of\
+We are assisting your relative to ensure that their is a smooth transition of \
 his/her assets to the legitimate heirs.\n
 Your relative listed you as one of the legitimate heirs.\n
-This document contains important information required in order to get access\
-to the inheritance plan of your relative.\n\nPlease keep this document in a\
-safe place. You will need it once your relative has passed away.`,
+This document contains important information required in order to get access \
+to the inheritance plan of your relative.\n
+Please keep this document in a safe place. You will need it once your \
+relative has passed away.`,
     pwd_line: 'Access password:',
     plan_id_line: 'Inheritance plan ID:',
     support_line: 'For questions contact: support@satskeeper.com'

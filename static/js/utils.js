@@ -1,4 +1,4 @@
-import {lang} from './custom.js';
+import {lang} from './editor.js';
 
 export const PLAINTEXTKEYS = [
   'date', 'version', 'first', 'last', 'planID', 'materialID', 'exchangeID',

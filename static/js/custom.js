@@ -200,7 +200,7 @@ function setPasswordButton() {
   }
 }
 
-function finalisePlan() {
+function validatePlan() {
   resetTabsHighlight();
   const mainForm = document.getElementById('main_form');
   fakeOnChangeForInputs(mainForm);
@@ -209,7 +209,12 @@ function finalisePlan() {
     highlightTabsWithErrors(errors);
     throw new Error(lang.invalid_form);
   }
-  else {
+  return errors;
+}
+
+function finalisePlan() {
+  const errors = validatePlan();
+  if (errors.length == 0) {
     savePlanInSession();
   }
 }
@@ -504,6 +509,7 @@ document.addEventListener('click', function(event) {
 
       // Proceed to next sub step
       else if (functionName && functionName === 'proceedSubStep') {
+        validatePlan();
         proceedSubStep();
       }
 

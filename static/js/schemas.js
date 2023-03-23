@@ -1,5 +1,5 @@
 import {todaysDate, removeDescriptionFromSchema} from './utils.js';
-import {lang} from './custom.js';
+import {lang} from './editor.js';
 
 export const sessionFormSchema = {
   disable_edit_json: true,

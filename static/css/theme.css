@@ -674,7 +674,7 @@ progress {
   }
 }
 .row {
-  --ar-gutter-x: 1.5rem;
+  --ar-gutter-x: 0.5rem;
   --ar-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;

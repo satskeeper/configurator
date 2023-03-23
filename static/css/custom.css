@@ -7,7 +7,7 @@
 }
 
 body > .container:first-of-type {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 h1 {
@@ -180,7 +180,7 @@ h3 {
 }
 
 .btn-secondary {
-  border: 1px solid #eba300 !important;
+  border: 1px solid #eba300;
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
@@ -192,4 +192,24 @@ h3 {
   position: absolute;
   top: 0.3rem;
   right: 0;
-} 
+}
+
+.json-editor-btn-delete {
+  margin-top: 0.6rem;
+  border: 0px;
+  padding: 0px;
+}
+
+@media (min-width: 1200px) {
+  .does_list {
+    margin-left: 10%;
+    padding-left: 32px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

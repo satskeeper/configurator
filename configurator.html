@@ -75,24 +75,24 @@
           </div>
         </div>
         <div class="row content mt-4">
-          <div class="col-10 mx-auto">
+          <div class="col-md-10 mx-auto">
             <div class="row">
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-sm-6">
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="does_page_title1">Do's</h5>
-                    <ul style="line-height: 3; list-style-type:none; margin-left: 10%">
+                    <ul class="does_list" style="line-height: 3; list-style-type:none; padding-left: 0px">
                       <li><i class="ai-circle-check me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_do1">Document how to access each wallet.</span></li>
                       <li><i class="ai-circle-check me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_do2">Document how to access each account.</span></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-sm-6">
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="does_page_title2">Dont's</h5>
-                    <ul style="line-height: 3; list-style-type:none; margin-left: 10%">
+                    <ul class="does_list" style="line-height: 3; list-style-type:none; padding-left: 0px">
                       <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont1">Do NOT include any private keys.</span></li>
                       <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont2">Do NOT include any seed words.</span></li>
                       <li><i class="ai-circle-x me-1 fs-3" style="margin-top: -0.2rem"></i><span data-i18n-key="does_page_dont3">Do NOT include any passwords.</span></li>
@@ -101,10 +101,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col col-1">
+                <div class="col col-4 col-md-2">
                   <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_does_donts" data-previous-step="step_create_or_import"><<</button>
                 </div>
-                <div class="col col-11">
+                <div class="col col-8 col-md-10">
                   <button class="btn btn-primary btn-block mt-auto w-100" data-this-step="step_does_donts" data-next-step="step_create_password" data-i18n-key="continue_button">Continue</button>
                 </div>
               </div>
@@ -122,7 +122,7 @@
           </div>
         </div>
         <div class="row content mt-4">
-          <div class="col col-10 mx-auto">
+          <div class="col-md-10 mx-auto">
             <div class="row">
               <div class="col-12">
                 <div class="card">
@@ -139,10 +139,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col col-1">
+                <div class="col col-4 col-md-2">
                   <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_create_password" data-previous-step="step_does_donts"><<</button>
                 </div>
-                <div class="col col-11">
+                <div class="col col-8 col-md-10">
                   <button class="btn btn-primary btn-block mt-auto w-100" data-function="setPasswordButton" data-i18n-key="password_page_continue_button">Continue</button>
                 </div>
               </div>
@@ -160,9 +160,9 @@
           </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-          <div class="col-12 col-md-10 mx-auto">
+          <div class="col-md-10 mx-auto">
             <div class="row">
-              <div class="col" id="sessionPlan" hidden style="min-width: 25rem">
+              <div class="col" id="sessionPlan" hidden style="min-width: 22rem">
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="import_account_title">Import from my account</h5>
@@ -172,13 +172,18 @@
                   </div>
                 </div>
               </div>
-              <div class="col" style="min-width: 25rem">
+              <div class="col" style="min-width: 22rem">
                 <div class="card" id="filePlan" >
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="import_file_title">Import from file</h5>
                     <p class="cart-text" data-i18n-key="import_file_text">To import an encrypted inheritance plan, enter your access password and then select the file.</p>
                     <div id="upload_form"></div>
                   </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-4 col-md-2">
+                  <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_import" data-previous-step="step_create_or_import"><<</button>
                 </div>
               </div>
             </div>
@@ -203,10 +208,10 @@
                 <div id="main_form"></div>
                 <div class="mt-auto">
                   <div class="row">
-                    <div class="col col-1">
+                    <div class="col col-4 col-md-2">
                       <button class="btn btn-secondary btn-block mt-auto" data-this-step="step_configure" data-previous-step="step_create_password"><<</button>
                     </div>
-                    <div class="col col-11">
+                    <div class="col col-8 col-md-10">
                       <button id="subStepButton" class="btn btn-primary w-100 btn-block" data-offline-required="true" data-function="proceedSubStep" data-i18n-key="configure_continue_button">Continue</button>
                       <button id="validationButton" class="btn btn-primary w-100 btn-block d-none" data-offline-required="true" data-this-step="step_configure" data-next-step="step_save" data-function="finalisePlan" data-i18n-key="configure_encrypt_button">Encrypt plan and continue</button>
                     </div>
@@ -229,7 +234,7 @@
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
           <div class="col-12 col-md-10 mx-auto">
             <div class="row">
-              <div class="col" style="min-width: 25rem">
+              <div class="col" style="min-width: 22rem">
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="download_title">Download files</h5>
@@ -245,10 +250,10 @@
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col col-1">
+              <div class="col col-4 col-md-2">
                 <button class="btn btn-secondary btn-block" data-this-step="step_save" data-previous-step="step_configure"><<</button>
               </div>
-              <div class="col col-11">
+              <div class="col col-8 col-md-10">
                 <button id="continue-to-redirect" class="btn btn-primary btn-block w-100"  data-function="prepareForUpload" data-i18n-key="download_continue_button" disabled>Continue</button>
               </div>
             </div>
@@ -267,7 +272,7 @@
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
           <div class="col-12 col-md-10 mx-auto">
             <div class="row">
-              <div class="col" style="min-width: 25rem">
+              <div class="col">
                 <div class="card">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-center" data-i18n-key="save_plan_title">Save to Satskeeper</h5>

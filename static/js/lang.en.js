@@ -9,7 +9,8 @@ export const lang = {
   editor_non_existent_disable: 'Can\'t disable editor as it does not exist anymore.',
   editor_non_existent_enable: 'Can\'t enable editor as it does not exist anymore.',
   offline_required_warning: `Please disable your internet connection or enable\
-  flight mode. This inheritance plan configurator can only be used when\
+  flight mode. If you are using a VPN, you might also need to disconnect.\
+  This inheritance plan configurator can only be used when\
   offline in order to protect against malware on your computer.\
   Once you are offline, this message will disapear and the buttons below\
   will become clickable.`,

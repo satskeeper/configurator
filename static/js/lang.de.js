@@ -9,6 +9,7 @@ export const lang = {
   editor_non_existent_disable: 'Editor kann nicht deaktiviert werden, da er nicht mehr existiert.',
   editor_non_existent_enable: 'Editor kann nicht aktiviert werden, da er nicht mehr existiert.',
   offline_required_warning: `Bitte deaktiviere deine Internetverbindung oder aktiviere Flugmodus.\
+  Falls du einen VPN verwendest, deaktiviere diesen bitte auch.\
   Dieser Nachlassplan-Konfigurator kann nur offline verwendet werden um Malware vorzubeugen.\
   Sobald du offline bist wird diese Warnung verschwinden und du kannst fortfahren.`,
   incorrect_decryption_password: 'Zugangspasswort falsch',

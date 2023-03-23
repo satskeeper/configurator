@@ -475,12 +475,10 @@ window.addEventListener('load', function() {
       attachChooseOwnPasswordHandler();
       attachDisplayCardListener();
       attachTooltips();
-      setTimeout(() => {
-        proceedButtonContext();
-      }, 1000);
+      proceedButtonContext();
       setInterval(() => {
         checkNetwork(editors);
-      }, 1000);
+      }, 500);
     });
   });
 });

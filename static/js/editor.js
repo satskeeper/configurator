@@ -576,6 +576,14 @@ window.addEventListener('unload', function() {
   removePwd(); // remove PW from session when leaving/reloading the configurator
 });
 
+document.addEventListener('touchstart', (e) => {
+  // is not near edge of view, exit
+  if (e.pageX > 10 && e.pageX < window.innerWidth - 10) return;
+
+  // prevent swipe to navigate gesture
+  e.preventDefault();
+}, { passive: false });
+
 function enableContinueButton() {
   const btn = document.getElementById('continue-to-redirect');
   btn.disabled = false;

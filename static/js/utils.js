@@ -125,7 +125,8 @@ function isConnected() {
 
     if (
       location.hostname === 'localhost' ||
-      location.hostname.includes('127.0.0')
+      location.hostname.includes('127.0.0') ||
+      location.hostname.includes('192.168.1')
     ) {
       const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
       xhr.open('GET', PROXY_URL + 'https://satskeeper.com', true);

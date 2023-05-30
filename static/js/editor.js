@@ -584,12 +584,13 @@ if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
     // prevent swipe to navigate gesture
     e.preventDefault();
   }, { passive: false });
-
-  function enableContinueButton() {
-    const btn = document.getElementById('continue-to-redirect');
-    btn.disabled = false;
-  }
 }
+
+function enableContinueButton() {
+  const btn = document.getElementById('continue-to-redirect');
+  btn.disabled = false;
+}
+
 
 
 function downloadAccessFile(heirs) {

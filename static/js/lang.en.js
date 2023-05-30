@@ -119,12 +119,9 @@ export const lang = {
         title: 'Heirs',
         title_singlular: 'Heir',
         descripton: `Secify all your heirs and what percentage of the
-          recovered funds they are entitled to. The total must sum to 100%.
-          Attention: The name of your heir will not be encrypted.`,
-        first_name_title: 'First name (not encrypted)',
-        first_name_info: 'The heir name will not be encrypted as the Satskeeper team needs it in order to be able to contact your heir.',
-        last_name_title: 'Last name (not encrypted)',
-        last_name_info: 'The heir name will not be encrypted as the Satskeeper team needs it in order to be able to contact your heir.',
+          recovered funds they are entitled to. The total must sum to 100%.`,
+        first_name_title: 'First name',
+        last_name_title: 'Last name',
         share_title:  'Share %',
         share_info: 'Specify what percentage of all recovered coins this heir is entitled to.',
         birthday_title: 'Birthday',

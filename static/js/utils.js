@@ -1,7 +1,7 @@
 import {lang} from './editor.js';
 
 export const PLAINTEXTKEYS = [
-  'date', 'version', 'first', 'last', 'planID', 'materialID', 'exchangeID',
+  'date', 'version', 'planID', 'materialID', 'exchangeID',
   'walletID', 'deviceID', 'heirID',
 ];
 export const EXCLUDEKEYS = ['password', 'password_repeat', 'checksums'];

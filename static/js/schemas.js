@@ -117,7 +117,7 @@ export const mainFormSchema = {
           },
           version: {
             type: 'string',
-            default: '1.0',
+            default: '2.0',
             required: true,
             options: {
               hidden: true,
@@ -383,17 +383,11 @@ export const mainFormSchema = {
               title: lang.editors.main.heirs.first_name_title,
               type: 'string',
               required: true,
-              options: {
-                infoText: lang.editors.main.heirs.first_name_info,
-              },
             },
             last: {
               title: lang.editors.main.heirs.last_name_title,
               type: 'string',
               required: true,
-              options: {
-                infoText: lang.editors.main.heirs.last_name_info,
-              },
             },
             share: {
               title: lang.editors.main.heirs.share_title,

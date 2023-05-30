@@ -155,12 +155,9 @@ export const lang = {
         title: 'Erben',
         title_singlular: 'Erbe',
         descripton: `Gib deine Erben an und welchen Anteil der wiederhergestellten
-        Coins jedem Erben zusteht. Die Summe aller Anteile muss 100% ergeben.
-        Achtung: Die Namen der Erben werden nicht verschlüsselt.`,
-        first_name_title: 'Vorname (nicht verschlüsselt)',
-        first_name_info: 'Der Name des Erben wird nicht verschlüsselt, da das Satskeeper Team diesen benötigt, um deinen Erben zu kontaktieren.',
-        last_name_title: 'Nachname (nicht verschlüsselt)',
-        last_name_info: 'Der Name des Erben wird nicht verschlüsselt, da das Satskeeper Team diesen benötigt, um deinen Erben zu kontaktieren.',
+        Coins jedem Erben zusteht. Die Summe aller Anteile muss 100% ergeben.`,
+        first_name_title: 'Vorname',
+        last_name_title: 'Nachname',
         share_title:  'Anteil %',
         share_info: 'Dokumentiere welcher Anteil der wiederhergestellten Coins diesem Erben zustehen.',
         location_title: 'Wohnort (Land & Stadt)',
